@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teerawit Pongkunawut Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <span class="logo">Teerawit Pongkunawut</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <div class="typing-container">
+    <div class="typing" id="typing"></div>
+  </div>
+  
+  <!-- About Section -->
+  <section id="about" class="hero-section hidden">
+    <div class="container">
+      <div class="text-content">
+        <h1>
+          Electronics & Telecommunications Engineering Student<br />
+          <span>Building Tomorrow's Communications</span>
+        </h1>
+        <p>
+          An Electronics and Telecommunications Engineering student with expertise in Python programming, 
+          simulation tools, and PCB design. Passionate about artificial intelligence and semiconductor technologies, 
+          with experience in AI/ML development and strong skills in teamwork, leadership, and problem-solving. 
+          Committed to applying technical knowledge to create innovative solutions.
+        </p>
+        <div class="social-icons">
+          <a href="https://github.com/teerawit555" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/%E0%B8%98%E0%B8%B5%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B9%8C-%E0%B8%9E%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%B2%E0%B8%A7%E0%B8%B8%E0%B8%92%E0%B8%B4-448986345/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="image-content">
+        <div class="profile-picture">
+          <img src="https://cdn.discordapp.com/attachments/1316251651568304169/1331988315863257109/image.png?ex=67939e49&is=67924cc9&hm=c702d1ce7522930ad796bb814bc6044aa865241686722f0b3af13ced52ac220a&" 
+            alt="Profile Picture">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section hidden">
+    <div class="container">
+      <h2>Academic Projects</h2>
+      <div id="projects-list" class="projects-grid">
+
+        <div class="project-card">
+          <img src="https://www.student-circuit.com/wp-content/uploads/sites/54/2023/11/AdobeStock_23895545.jpeg" alt="Project 1">
+          <div class="content">
+            <h3>PCB Design</h3>
+            <p>Designed a DC-DC buck converter step-down using LM2596 with simulation tools like LTSpice, achieving a stable 12V output.</p>
+          </div>
+          <div class="card-footer">
+            <a href="pcb.html" class="view-project">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://www.eeeguide.com/wp-content/uploads/2016/09/Second-Order-Low-Pass-Butterworth-Filter-001.jpg" alt="Project 2">
+          <div class="content">
+            <h3>Micro Project: Analog Circuit Design</h3>
+            <p>Analysis and Design of 2nd Order Low Pass Filters using Butterworth and Chebyshev Filters, trading off performance and stability.</p>
+          </div>
+          <div class="card-footer">
+            <a href="analog.html" class="view-project">View Project →</a>
+          </div>
+        </div>
+  
+
+        <div class="project-card">
+          <img src="https://www.dicsinnovatives.com/blog/wp-content/uploads/2023/08/python-blog-image.jpg" alt="Project 1">
+          <div class="content">
+            <h3>Python Programming</h3>
+            <p>Developed a Shortest Path Finding Algorithm in Python for real-world application in network analysis and resource optimization.</p>
+          </div>
+          <div class="card-footer">
+            <a href="dfs.html" class="view-project">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://av-eks-lekhak.s3.amazonaws.com/media/__sized__/article_images/What-is-the-importance-of-facial-recognition-in-todays-world.jpg-thumbnail_webp-600x300.webp" alt="Face Recognition">
+          <div class="content">
+            <h3>Face Recognition Login System</h3>
+            <p>A secure user authentication system using Flask API and facial recognition. Collect, train, and match facial data for seamless login.</p>
+          </div>
+          <div class="card-footer">
+            <a href="face_recognition.html" class="view-project">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://www.proprofschat.com/blog/wp-content/uploads/2023/11/What-Is-an-FAQ-Chatbot.webp" alt="Chatbot for FAQs">
+          <div class="content">
+            <h3>Chatbot for FAQs</h3>
+            <p>An intelligent chatbot using NLP to provide instant answers and support for frequently asked questions.</p>
+          </div>
+          <div class="card-footer">
+            <a href="chatbot.html" class="view-project">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://visionplatform.ai/wp-content/uploads/2024/01/object-detection.png" alt="Object Detection">
+          <div class="content">
+            <h3>Object Detection</h3>
+            <p>Real-time object detection system using YOLOv8 with Flask API for flexible control and model training using COCO dataset.</p>
+          </div>
+          <div class="card-footer">
+            <a href="object_detection.html" class="view-project">View Project →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section hidden">
+    <div class="container">
+      <h2>Skills & Expertise</h2>
+      <div id="skills-list" class="skills-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Machine Learning</div>
+        <div class="skill-card">PCB Design</div>
+        <div class="skill-card">MATLAB</div>
+        <div class="skill-card">VHDL</div>
+        <div class="skill-card">Computer Vision</div>
+        <div class="skill-card">IoT</div>
+        <div class="skill-card">Assembly</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-row">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Phone</h3>
+          <p>+66 88-5977058</p>
+        </div>
+        <div class="divider"></div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p><a href="mailto:teeteepong11@gmail.com">teeteepong11@gmail.com</a></p>
+        </div>
+        <div class="divider"></div>
+        <div class="contact-item address">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Address</h3>
+          <p>Pracha Uthit Rd., Rat Burana Subdistrict,<br>Rat Burana District, Bangkok 10140</p>
+        </div>
+        <div class="divider"></div>
+        <div class="contact-item">
+          <i class="fas fa-share-alt"></i>
+          <h3>Social Media</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100003362139710" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/tt_sia/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://line.me/ti/p/BynQBADE0a" target="_blank"><i class="fab fa-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Teerawit Pongkunawut. All rights reserved. | <a href="https://github.com/teerawit555" target="_blank">GitHub Repository</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

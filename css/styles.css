@@ -1,0 +1,453 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+/* General Section Styles */
+.section {
+  padding: 6rem 1rem;
+  background-color: #0d1117; /* Dark theme background */
+  color: #c9d1d9; /* Light text */
+  
+}
+
+.section h2 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #9f7aea, #805ad5);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+  
+/* Navbar */
+.navbar {
+    background: #161b22;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #21262d;
+  padding: 1rem 0;
+}
+  
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+  
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem; /* เพิ่มระยะห่างระหว่างลิงก์ */
+}
+  
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #8b949e;
+  transition: color 0.3s;
+}
+  
+.nav-links a:hover {
+  color: #9f7aea;
+}
+
+/* progress-bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px; /* Thickness of the progress bar */
+  background: #9f7aea; /* Bar color (can be changed to match your theme) */
+  width: 0; /* Initial width (will be updated dynamically) */
+  z-index: 9999; /* Ensure it appears above all other elements */
+  transition: width 0.25s ease-out; /* Smooth animation */
+}
+
+/* Typing Effect */
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ทำให้ข้อความอยู่กลางหน้าจอ */
+  background: linear-gradient(135deg, #0d1117, #21262d);
+}
+
+.typing {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  border-right: 3px solid #9f7aea;
+  animation: blink 0.7s step-end infinite;
+}
+
+/* Keyframes for Cursor Blinking */
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #9f7aea;
+  }
+}
+
+/* Animation for fade-in and slide-up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* เลื่อนลงเล็กน้อย */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Default hidden state */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible state */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 80vh; /* ให้สูงเต็มจอ */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 120px 0 60px; /* เพิ่ม padding ล่างเพื่อแยกจาก section ถัดไป */
+  background: #0d1117; /* พื้นหลังสีเข้ม */
+}
+
+.hero-section .text-content h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+  
+.hero-section .text-content h1 span {
+  color: #9f7aea;
+}
+  
+.hero-section .text-content p {
+  font-size: 1.2rem;
+  color: #8b949e;
+  margin-bottom: 1.5rem;
+}
+  
+.hero-section .text-content .social-icons a {
+  color: #8b949e;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+  
+.hero-section .text-content .social-icons a:hover {
+  color: #9f7aea;
+  transform: scale(1.1);
+}
+  
+.hero-section .image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.hero-section .image-content .profile-picture {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #9f7aea;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+  
+.hero-section .image-content .profile-picture:hover {
+  transform: scale(1.1);
+}
+  
+.hero-section .image-content .profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+  /* Sections */
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .section:nth-child(even) {
+    background: #0d1117;
+  }
+  
+  .section:nth-child(odd) {
+    background: #161b22;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .projects-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Project Cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow เริ่มต้น */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* ยกขึ้นเล็กน้อย */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* เพิ่ม shadow */
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card .content {
+  padding: 1rem;
+  flex-grow: 1; /* เพื่อผลักดัน footer ลง */
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #8b949e;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-card .card-footer {
+  padding: 1rem;
+  background: #161b22; /* เพิ่ม background */
+}
+
+.project-card a.view-project {
+  color: #9f7aea;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.project-card a.view-project:hover {
+  color: #805ad5;
+}
+
+/* Adjust grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+
+  /* View Project Link */
+.view-project {
+  display: inline-block;
+  color: #9f7aea;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out;
+}
+
+.view-project:hover {
+  color: #805ad5;
+  transform: scale(1.1);
+}
+  
+/* Skill Cards */
+.skill-card {
+  background: #21262d;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+  
+.skill-card:hover {
+  background: #33373f;
+  transform: scale(1.05);
+}
+  
+.skill-card h3 {
+  color: #f5f5f5;
+}
+  
+/* Contact List */
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Contact Item */
+.contact-item {
+  text-align: center;
+  flex: 1 1 200px; /* ขนาดขั้นต่ำสำหรับบล็อกอื่น */
+  max-width: 200px; /* จำกัดความกว้าง */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Address Item */
+.contact-item.address {
+  flex: 2 1 400px; /* เพิ่มความกว้างของ Address */
+  max-width: 500px; /* ขยายขนาดสูงสุด */
+}
+
+.contact-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #c9d1d9;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* เพิ่มเงาให้ดูมีมิติ */
+}
+
+.contact-item i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #9f7aea;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-item i:hover {
+  transform: scale(1.2);
+  color: #805ad5;
+}
+
+.contact-item p,
+.contact-item a {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #c9d1d9;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #805ad5;
+}
+
+
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: #9f7aea;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #805ad5;
+  transform: scale(1.2);
+}
+
+
+/* Footer */
+.footer {
+  background: #0d1117;
+  text-align: center;
+  padding: 1.5rem;
+  color: #8b949e;
+}
+
+.footer a {
+  color: #9f7aea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #805ad5;
+}
+
+/* GitHub Link */
+.github-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.github-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9f7aea;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.github-link a:hover {
+  background-color: #805ad5;
+}
+  

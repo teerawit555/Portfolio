@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Hero Section */
+.project-hero {
+  color: #ffffff;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e1e2f, #24243e, #6254beb0);
+  background-size: 300% 300%; /* ขยายขนาดพื้นหลัง */
+  animation: gradientShift 8s ease infinite;
+}
+
+.project-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(138,43,226,0.2) 0%, rgba(0,0,0,0) 70%);
+  z-index: 0;
+  animation: rotateBackground 20s linear infinite; /* เพิ่มการหมุน background */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%; /* เริ่มต้นที่จุดหนึ่ง */
+  }
+  50% {
+    background-position: 100% 50%; /* เคลื่อนไปอีกจุด */
+  }
+  100% {
+    background-position: 0% 50%; /* กลับมาที่เดิม */
+  }
+}
+
+.project-hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* เพิ่มเงาให้ดูมีมิติ */
+  z-index: 1;
+  position: relative;
+}
+
+.project-hero .subheading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #a0a8ff;
+  margin-bottom: 40px;
+  z-index: 1;
+  position: relative;
+}
+
+.project-hero .project-image {
+  max-width: 60%;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.project-hero .project-image:hover {
+  transform: scale(1.05); /* เพิ่มเอฟเฟกต์ zoom */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+.project-hero p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #e4e4e4;
+  margin-top: 1.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.project-hero p::after {
+  content: '';
+  display: block;
+  width: 400px;
+  height: 3px;
+  background: #fff;
+  margin: 1.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Page Content */
+h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #9f7aea;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+p {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #c9d1d9;
+}
+
+/* Screenshots */
+.screenshot {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.screenshot img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.screenshot img:hover {
+  transform: scale(1.05);
+}
+
+.screenshot p {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-top: 10px;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+  background: #9f7aea;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background: #805ad5;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: #161b22;
+  text-align: center;
+  padding: 20px;
+  color: #8b949e;
+  margin-top: 40px;
+  border-top: 1px solid #21262d;
+}
+
+.footer a {
+  color: #9f7aea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #805ad5;
+}
