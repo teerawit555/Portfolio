@@ -26,15 +26,9 @@
   <header class="project-hero">
     <div class="container">
       <h1>Analog Circuit Design</h1>
-      <div class="subheading">
-        2nd Order Butterworth Low Pass Filter vs 2nd Order Chebyshev Low Pass Filter
-      </div>
-      <img src="https://cdn.discordapp.com/attachments/1316251651568304169/1333033863064322068/image.png?ex=67976c07&is=67961a87&hm=56b15adc8330015cd0906551c6a0e2ed4f163051e583e97279deda4b3bd857d8&" 
-           alt="Analog Circuit Design" 
-           class="project-image">
       <p>
-        This project focused on designing and analyzing 2nd order low-pass filters using Butterworth and Chebyshev methods. 
-        The design was optimized for frequency stability, offering trade-offs between performance and complexity.
+        This project focuses on designing and analyzing 2nd order low-pass filters using Butterworth and Chebyshev methods. 
+        The design is optimized for frequency stability, offering trade-offs between performance and complexity.
       </p>
     </div>
   </header>
@@ -43,10 +37,63 @@
   <div class="container">
     <h2>Key Features</h2>
     <ul>
-      <li>High-performance filter design with LTSpice simulations.</li>
-      <li>Comparison between Butterworth and Chebyshev filters.</li>
-      <li>Optimized stability and frequency response for circuit applications.</li>
+        <li>High-performance filter design with LTSpice simulations.</li>
+        <li>Comparison between Butterworth and Chebyshev filters.</li>
+        <li>Optimized stability and frequency response for circuit applications.</li>
     </ul>
+
+    <h2>Comparison Criteria</h2>
+      <div class="comparison-grid">
+        <div class="comparison-item">Ripple Voltage</div>
+        <div class="comparison-item">Roll-off Rate</div>
+        <div class="comparison-item">Voltage Gain</div>
+        <div class="comparison-item">Poles and Zeros</div>
+        <div class="comparison-item">Frequency Response</div>
+        <div class="comparison-item">Transfer Function, Q-Factor</div>
+      </div>
+
+    <h2>Design</h2>
+    <div class="screenshot-group">
+      <div class="screenshot">
+        <img src="assets/Butterworth.png" alt="Butterworth Circuit">
+        <p>Figure 1: Butterworth Filter Circuit</p>
+      </div>
+      <div class="screenshot">
+        <img src="assets/Chebyshev.png" alt="Chebyshev Circuit">
+        <p>Figure 2: Chebyshev Filter Circuit</p>
+      </div>
+    </div>
+
+    <h2>Experimental Steps</h2>
+    <p>Both Butterworth and Chebyshev filters were designed and analyzed using LTSpice simulations. The following steps were carried out:</p>
+    <ol>
+      <li>Construct circuits in LTSpice.</li>
+      <li>Calculate frequency cut-off.</li>
+      <li>Perform AC Analysis to observe ripple voltage.</li>
+      <li>Analyze roll-off rate and frequency response.</li>
+      <li>Perform transient analysis at different frequency ranges.</li>
+      <li>Generate Poles-Zeros plots using MATLAB.</li>
+      <li>Compare theoretical values with simulation results.</li>
+      <li>Discuss findings and conclusions.</li>
+    </ol>
+
+    <h2>Simulation Results</h2>
+    <div class="screenshot-group">
+      <div class="screenshot">
+        <img src="assets/rolloff_butterworth.png" alt="Butterworth Simulation Results">
+        <p>Figure 3: Butterworth Simulation Roll-off rate Result</p>
+      </div>
+      <div class="screenshot">
+        <img src="assets/rolloff_Chevbyshev.png" alt="Chebyshev Simulation Results">
+        <p>Figure 4: Chebyshev Simulation Roll-off rate Result</p>
+      </div>
+    </div>
+
+    <h2>Comparison Table</h2>
+    <div class="screenshot">
+      <img src="assets/comparison_table.png" alt="Comparison Table">
+      <p>Figure 5: Filter Comparison</p>
+    </div>
 
     <!-- Back Button -->
     <a href="index.html#projects" class="back-button">← Back to Projects</a>

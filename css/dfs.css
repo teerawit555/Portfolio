@@ -237,11 +237,11 @@ body {
   transform: scale(1.05);
 }
   
-  /* Footer */
-  .footer {
-    background: #161b22;
-    text-align: center;
-    padding: 1.5rem 0;
-    color: #8b949e;
-  }
+/* Footer */
+.footer {
+  background: #161b22;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #8b949e;
+}
   

@@ -36,7 +36,6 @@
 
   <!-- Page Content -->
   <div class="container">
-
     <h2>Key Features</h2>
     <ul>
         <li>Efficient step-down voltage conversion.</li>
@@ -44,23 +43,53 @@
         <li>Applicable for embedded systems and power electronics.</li>
     </ul>
 
+    <h2>Buck Converter Overview</h2>
+    <p>
+      A buck converter is a DC-DC step-down power supply circuit that reduces the input voltage to a lower output voltage. 
+      It uses switching regulators to maintain efficiency and consists of key components such as an inductor, capacitor, diode, 
+      MOSFET switch, and controller.
+    </p>
+
     <h2>Design</h2>
     <div class="screenshot">
-      <img src="https://cdn.discordapp.com/attachments/1316251651568304169/1333056029100871720/image.png?ex=679780ac&is=67962f2c&hm=005df3a7988e591102c3e1c6f7abd4c95fec124c81cfb0fdfcc5da46b077c93b&" alt="PCB Design">
+      <img src="assets/kicad.png" alt="PCB Design">
       <p>Figure 1: PCB layout design interface</p>
     </div>
     <div class="screenshot">
-      <img src="https://cdn.discordapp.com/attachments/1316251651568304169/1333055697616769035/image.png?ex=6797805d&is=67962edd&hm=c1ce9c21c4a3495ee9cbb6ab912a651a6ad027c81c4da860d1ea36488b0e3303&" alt="PCB Simulation">
+      <img src="assets/Ltsppice.png" alt="PCB Simulation">
       <p>Figure 2: LTSpice Schematic</p>
     </div>
+
+    <h2>Testing and Results</h2>
+    <p>
+      The fabricated PCB was tested using a power supply of 30V input, and the output voltage was measured using a multimeter. 
+      The expected output voltage was 12V, but the measured value was 11.84V, leading to a deviation of approximately 1.42%.
+    </p>
     <div class="screenshot">
-      <img src="https://cdn.discordapp.com/attachments/1316251651568304169/1333056474829684736/image.png?ex=67978116&is=67962f96&hm=fd9299803aa364f15cf58be23a49d5a19456653d7c49885200b98ccda1ecbf43&" alt="PCB Simulation">
+      <img src="assets/sim_ltspice.png" alt="PCB Simulation">
       <p>Figure 3: LTSpice simulation result</p>
     </div>
     <div class="screenshot">
-      <img src="https://cdn.discordapp.com/attachments/1316251651568304169/1333056780191797291/image.png?ex=6797815f&is=67962fdf&hm=4597d04111d7ed47d359a0f512a801660d1f4b4dde8f4652b4b86e673185a393&" alt="PCB Simulation">
+      <img src="assets/pcb_soldring.png" alt="PCB Simulation">
       <p>Figure 4: PCB after soldering</p>
     </div>
+    <div class="screenshot">
+      <img src="assets/multimeter.png" alt="Measured Output">
+      <p>Figure 5: Measured Output Voltage</p>
+    </div>
+
+    <h2>Challenges and Observations</h2>
+    <ul>
+      <li>Incorrect component footprints caused difficulty in sourcing compatible parts.</li>
+      <li>Issues with component polarity required rework.</li>
+      <li>Measured output was slightly lower than expected due to component tolerances.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+      The project successfully demonstrated the design, simulation, and testing of a buck converter. 
+      The results were within an acceptable error margin, making the design viable for real-world applications.
+    </p>
   
     <!-- Back Button -->
     <a href="index.html#projects" class="back-button">← Back to Projects</a>

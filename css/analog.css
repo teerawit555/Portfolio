@@ -1,180 +1,239 @@
 /* General Styles */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #0d1117;
-    color: #c9d1d9;
-    line-height: 1.6;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Hero Section */
+.project-hero {
+  color: #ffffff;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e1e2f, #24243e, #6254beb0);
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.project-hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.project-hero .subheading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #a0a8ff;
+  margin-bottom: 40px;
+}
+
+.project-hero .project-image {
+  max-width: 50%;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.project-hero .project-image:hover {
+  transform: scale(1.05);
+}
+
+.project-hero p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #e4e4e4;
+  margin-top: 1.5rem;
+}
+
+
+/* Section Headings */
+h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding-bottom: 5px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 100%; /* เส้นสีม่วงยาวเท่ากับหัวข้อ */
+  height: 3px;
+  background: #9f7aea;
+  margin-top: 5px;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: left;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #c9d1d9;
+}
+
+/* Section Styling */
+.section {
+  margin: 40px 0;
+  padding: 20px;
+  background: #161b22;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* Design Screenshots Grid */
+.screenshot-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.screenshot {
+  background: #161b22;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  padding: 15px;
+}
+
+.screenshot img {
+  width: 100%; /* ทำให้ภาพเต็มพื้นที่ */
+  height: 300px; /* กำหนดความสูงเท่ากัน */
+  object-fit: contain; /* ให้ขนาดรูปอยู่ในกรอบไม่ถูกตัด */
+  border-radius: 10px;
+}
+
+.screenshot:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+.screenshot p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Comparison Grid */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ขยายขนาดบล็อก */
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+}
+
+.comparison-item {
+  background: linear-gradient(135deg, #9f7aea, #6a5acd); /* ไล่สีให้ดูทันสมัย */
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ดูมิติ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.comparison-item:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #805ad5, #483d8b);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* เงาเข้มขึ้น */
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .comparison-grid {
+    grid-template-columns: repeat(2, 1fr); /* สำหรับมือถือ ให้แสดง 2 คอลัมน์ */
   }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  /* Project Hero Section */
-  .project-hero {
-    color: #ffffff;
-    text-align: center;
-    padding: 8rem 1rem;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, #1e1e2f, #24243e, #6254beb0);
-    background-size: 300% 300%; /* ขยายขนาดพื้นหลัง */
-    animation: gradientShift 8s ease infinite;
-  }
-  
-  .project-hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(138,43,226,0.2) 0%, rgba(0,0,0,0) 70%);
-    z-index: 0;
-    animation: rotateBackground 20s linear infinite; /* เพิ่มการหมุน background */
-  }
-  
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%; /* เริ่มต้นที่จุดหนึ่ง */
-    }
-    50% {
-      background-position: 100% 50%; /* เคลื่อนไปอีกจุด */
-    }
-    100% {
-      background-position: 0% 50%; /* กลับมาที่เดิม */
-    }
-  }
-  
-  .project-hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* เพิ่มเงาให้ดูมีมิติ */
-    z-index: 1;
-    position: relative;
-  }
-  
-  .project-hero .subheading {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #c4a0ff;
-    margin-bottom: 40px;
-    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.6); /* เพิ่มเงาให้ดูมีมิติ */
-    z-index: 1;
-    position: relative;
-  }
-  
-  .project-hero .project-image {
-    max-width: 60%;
-    margin: 20px auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
-    position: relative;
-  }
-  
-  .project-hero .project-image:hover {
-    transform: scale(1.05); /* เพิ่มเอฟเฟกต์ zoom */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-  }
-  
-  .project-hero p {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #e4e4e4;
-    margin-top: 1.5rem;
-    z-index: 1;
-    position: relative;
-  }
-  
-  .project-hero p::after {
-    content: '';
-    display: block;
-    width: 400px;
-    height: 3px;
-    background: #fff;
-    margin: 1.5rem auto 0;
-    border-radius: 2px;
-  }
-  
-  /* Page Content */
-  h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    text-align: center;
-    border-bottom: 2px solid #9f7aea;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  h3 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    text-align: center;
-    border-bottom: 2px solid #9f7aea;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  
-  p {
-    color: #ffffff;
-    margin-bottom: 1rem;
-  }
-  
-  ul {
-    margin-left: 20px;
-    list-style: disc;
-  }
-  
-  ul li {
-    margin-bottom: 10px;
-    color: #c9d1d9;
-  }
-  
-  /* Back Button */
-  .back-button {
-    display: inline-block;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    font-weight: bold;
-    color: #ffffff;
-    background: #9f7aea;
-    border-radius: 25px;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  .back-button:hover {
-    background: #805ad5;
-    transform: scale(1.05);
-  }
-  
-  /* Footer */
-  .footer {
-    background: #161b22;
-    text-align: center;
-    padding: 20px;
-    color: #8b949e;
-    margin-top: 40px;
-    border-top: 1px solid #21262d;
-  }
-  
-  .footer a {
-    color: #9f7aea;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer a:hover {
-    color: #805ad5;
-  }
-  
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+  background: #9f7aea;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background: #805ad5;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: #161b22;
+  text-align: center;
+  padding: 20px;
+  color: #8b949e;
+  margin-top: 40px;
+  border-top: 1px solid #21262d;
+}
+
+.footer a {
+  color: #9f7aea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #805ad5;
+}
