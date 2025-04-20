@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
     projectCard.style.transition = "transform 0.3s ease-in-out"; // เพิ่ม transition แบบเบื้องต้น
   });
 
+  // Menu Toggle for Mobile Navbar
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    });
+  }
+  
   // Focus hover effect only on "View Project" link
   const viewProjectLinks = document.querySelectorAll(".view-project");
   viewProjectLinks.forEach((link) => {

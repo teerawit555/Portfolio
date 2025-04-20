@@ -102,6 +102,23 @@ body {
   margin: 1.5rem auto 0;
   border-radius: 2px;
 }
+.project-hero .status-message::after {
+  content: none; /* ปิดการทำงานของ ::after สำหรับ .status-message */
+}
+
+.project-hero .status-message {
+  color: #ffcc00; /* สีเหลือง */
+
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #161b22; /* พื้นหลังสีเข้ม */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
 
 /* Page Content */
 h2 {
@@ -166,4 +183,77 @@ ul li {
 
 .footer a:hover {
   color: #805ad5;
+}
+
+/* Responsive Styles */
+
+/* สำหรับหน้าจอขนาดกลาง (Tablet) */
+@media (max-width: 768px) {
+  .project-hero {
+    padding: 6rem 1rem; /* ลด Padding */
+  }
+
+  .project-hero h1 {
+    font-size: 3rem; /* ลดขนาดหัวข้อ */
+  }
+
+  .project-hero .subheading {
+    font-size: 1.2rem; /* ลดขนาด Subheading */
+  }
+
+  .project-hero .project-image {
+    max-width: 70%; /* ลดขนาดรูปภาพ */
+  }
+
+  .project-hero p {
+    font-size: 1rem; /* ลดขนาดข้อความ */
+  }
+
+  .project-hero .status-message {
+    font-size: 1rem; /* ลดขนาดข้อความสถานะ */
+    padding: 8px; /* ลด Padding */
+  }
+
+  .back-button {
+    padding: 0.6rem 1.5rem; /* ลดขนาดปุ่ม */
+    font-size: 0.9rem; /* ลดขนาดข้อความในปุ่ม */
+  }
+}
+
+/* สำหรับหน้าจอขนาดเล็ก (Mobile) */
+@media (max-width: 480px) {
+  .project-hero {
+    padding: 4rem 1rem; /* ลด Padding เพิ่มเติม */
+  }
+
+  .project-hero h1 {
+    font-size: 2.5rem; /* ลดขนาดหัวข้อ */
+  }
+
+  .project-hero .subheading {
+    font-size: 1rem; /* ลดขนาด Subheading */
+  }
+
+  .project-hero .project-image {
+    max-width: 90%; /* ลดขนาดรูปภาพเพิ่มเติม */
+  }
+
+  .project-hero p {
+    font-size: 0.9rem; /* ลดขนาดข้อความ */
+  }
+
+  .project-hero .status-message {
+    font-size: 0.9rem; /* ลดขนาดข้อความสถานะ */
+    padding: 6px; /* ลด Padding */
+  }
+
+  .back-button {
+    padding: 0.5rem 1rem; /* ลดขนาดปุ่ม */
+    font-size: 0.8rem; /* ลดขนาดข้อความในปุ่ม */
+  }
+
+  .footer {
+    font-size: 0.8rem; /* ลดขนาดข้อความใน Footer */
+    padding: 15px; /* ลด Padding */
+  }
 }

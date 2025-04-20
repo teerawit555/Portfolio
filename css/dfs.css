@@ -244,4 +244,85 @@ body {
   padding: 1.5rem 0;
   color: #8b949e;
 }
+
+/* Responsive Styles */
+
+/* สำหรับหน้าจอขนาดกลาง (Tablet) */
+@media (max-width: 768px) {
+  .project-hero {
+    padding: 6rem 1rem; /* ลด Padding */
+  }
+
+  .project-hero h1 {
+    font-size: 3rem; /* ลดขนาดหัวข้อ */
+  }
+
+  .project-hero .subheading {
+    font-size: 1.2rem; /* ลดขนาด Subheading */
+  }
+
+  .project-hero .project-image {
+    max-width: 70%; /* ลดขนาดรูปภาพ */
+  }
+
+  .project-details {
+    padding: 3rem 1rem; /* ลด Padding */
+  }
+
+  .project-content {
+    flex-direction: column; /* จัดเนื้อหาเป็นแนวตั้ง */
+    gap: 1.5rem; /* ลดระยะห่าง */
+  }
+
+  .project-text h2,
+  .project-text h3 {
+    font-size: 1.5rem; /* ลดขนาดหัวข้อ */
+  }
+
+  .project-text p {
+    font-size: 0.9rem; /* ลดขนาดข้อความ */
+  }
+}
+
+/* สำหรับหน้าจอขนาดเล็ก (Mobile) */
+@media (max-width: 480px) {
+  .project-hero {
+    padding: 4rem 1rem; /* ลด Padding เพิ่มเติม */
+  }
+
+  .project-hero h1 {
+    font-size: 2.5rem; /* ลดขนาดหัวข้อ */
+  }
+
+  .project-hero .subheading {
+    font-size: 1rem; /* ลดขนาด Subheading */
+  }
+
+  .project-hero .project-image {
+    max-width: 90%; /* ลดขนาดรูปภาพเพิ่มเติม */
+  }
+
+  .project-details {
+    padding: 2rem 1rem; /* ลด Padding */
+  }
+
+  .project-text h2,
+  .project-text h3 {
+    font-size: 1.2rem; /* ลดขนาดหัวข้อ */
+  }
+
+  .project-text p {
+    font-size: 0.8rem; /* ลดขนาดข้อความ */
+  }
+
+  .project-buttons .btn {
+    padding: 0.6rem 1.5rem; /* ลดขนาดปุ่ม */
+    font-size: 0.9rem; /* ลดขนาดข้อความในปุ่ม */
+  }
+
+  .back-button {
+    padding: 0.6rem 1.5rem; /* ลดขนาดปุ่ม Back */
+    font-size: 0.9rem; /* ลดขนาดข้อความในปุ่ม Back */
+  }
+}
   

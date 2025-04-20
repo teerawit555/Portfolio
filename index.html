@@ -12,6 +12,7 @@
   <nav class="navbar">
     <div class="container">
       <span class="logo">Teerawit Pongkunawut</span>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -34,7 +35,7 @@
       <div class="text-content">
         <h1>
           Electronics & Telecommunications Engineering Student<br />
-          <span>Building Tomorrow's Communications</span>
+          <span>Innovation is the key to unlocking the future</span>
         </h1>
         <p>
           An Electronics and Telecommunications Engineering student with expertise in Python programming, 
@@ -43,8 +44,8 @@
           Committed to applying technical knowledge to create innovative solutions.
         </p>
         <div class="social-icons">
-          <a href="https://github.com/teerawit555" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/%E0%B8%98%E0%B8%B5%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B9%8C-%E0%B8%9E%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%B2%E0%B8%A7%E0%B8%B8%E0%B8%92%E0%B8%B4-448986345/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/teerawit555" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/teerawit555/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <div class="image-content">
@@ -132,21 +133,61 @@
     </div>
   </section>
 
+  <!-- Work exp Section -->
+  <section id="work-exp" class="section hidden">
+    <div class="container">
+      <h2>Work Experiences</h2>
+      <div class="work-exp-grid">
+        <div class="work-card">
+          <div class="work-card-header">
+            <img src="assets/scb_logo_2.jpg" alt="SCB Techhub Logo" class="company-logo">
+            <h3>SCB Techhub at KMUTT</h3>
+          </div>
+          <p>Position : QA Automation (Feb 2025 - Present)</p>
+          <p>Developed and executed UI tests for SCB's web applications for billers
+            and buyers. Utilized Robot Framework to write and automate test
+            scripts, ensuring application functionality and performance.
+            </p>
+        </div>
+        <div class="work-card">
+          <div class="work-card-header">
+            <img src="assets/analog_devices_logo.jpg" alt="Analog Devices Logo" class="company-logo">
+            <h3>Internship at Analog Devices</h3>
+          </div>
+          <p>Position : Test Development Engineer Intern (Jun 2025 - Jan 2026)</p>
+          <p></p>
+      </div>
+    </div>
+  </section>
+
   <!-- Skills Section -->
   <section id="skills" class="section hidden">
     <div class="container">
       <h2>Skills & Expertise</h2>
       <div id="skills-list" class="skills-grid">
-        <div class="skill-card">Python</div>
-        <div class="skill-card">Machine Learning</div>
-        <div class="skill-card">PCB Design</div>
-        <div class="skill-card">MATLAB</div>
-        <div class="skill-card">VHDL</div>
-        <div class="skill-card">Computer Vision</div>
-        <div class="skill-card">Arduino</div>
-        <div class="skill-card">Assembly</div>
-        <div class="skill-card">Robot Framework</div>
-        <div class="skill-card">Postman</div>
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <div class="skill-card">Python</div>
+          <div class="skill-card">C</div>
+          <div class="skill-card">VHDL</div>
+          <div class="skill-card">MATLAB</div>
+          <div class="skill-card">Assembly</div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Frameworks</h3>
+          <div class="skill-card">Arduino</div>
+          <div class="skill-card">Vivado</div>
+          <div class="skill-card">LTspice</div>
+          <div class="skill-card">Kicad</div>
+          <div class="skill-card">Robot Framework</div>
+          <div class="skill-card">Postman</div>
+        </div>
+        <div class="skill-category">
+          <h3>Fields of Expertise</h3>
+          <div class="skill-card">Machine Learning</div>
+          <div class="skill-card">PCB Design</div>
+          <div class="skill-card">Computer Vision</div>
+        </div>
       </div>
     </div>
   </section>
@@ -187,10 +228,15 @@
     </div>
   </section>
 
-
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Teerawit Pongkunawut. All rights reserved. | <a href="https://github.com/teerawit555" target="_blank">GitHub Repository</a></p>
+    <div class="container">
+      <p>&copy; 2025 Teerawit Pongkunawut. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/teerawit555" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/teerawit555/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
